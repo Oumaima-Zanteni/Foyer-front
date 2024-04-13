@@ -1,10 +1,7 @@
-version: "3.8"
-
+version: '3.8'
 services:
-  angular-app:
-    build:
-      context: .
-      dockerfile: dockerfile
-    restart: always
+  angular-aplication:
+    image: oumaima15/angular-app:latest
     ports:
-      - 80:80
+      - "4201:80"  # Specify ports as strings
+    restart: always
