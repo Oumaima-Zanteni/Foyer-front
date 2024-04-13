@@ -2,7 +2,7 @@ FROM node:latest as builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install -g @angular/cli
-RUN npm install --registry=https://registry.npmjs.org/
+RUN npm install
 COPY . .
 RUN ng build
 FROM nginx:alpine
